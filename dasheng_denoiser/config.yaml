@@ -1,0 +1,27 @@
+feature_extractor:
+  class_path: dasheng_denoiser.feature_extractors.DashengFeatures
+  init_args:
+    dasheng_model: dasheng_base
+
+second_encoder:
+  class_path: dasheng_denoiser.models.DashengBlocks  
+  init_args:
+    embedding_dims: 768
+    num_heads: 8
+    num_layers: 3
+
+backbone:
+  class_path: vocos.models.VocosBackbone
+  init_args:
+    input_channels: 768
+    dim: 768
+    intermediate_dim: 1152
+    num_layers: 8
+
+head:
+  class_path: vocos.heads.ISTFTHead
+  init_args:
+    dim: 768
+    n_fft: 1280
+    hop_length: 640
+    padding: same

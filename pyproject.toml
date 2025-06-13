@@ -1,0 +1,65 @@
+[project]
+name = 'dasheng-denoiser'
+version = '0.0.1'
+dependencies = [
+    'dasheng',
+    'vocos',
+    'tqdm',
+    'numpy',
+    'setuptools',
+    'torch>=1.8.2',
+    'torchaudio',
+]
+requires-python = '>=3.10'
+authors = [
+  {name = "Xingwei Sun", email = "sunxingwei@xiaomi.com"},
+  {name = "Heinrich Dinkel", email = "dinkelheinrich@xiaomi.com"},
+]
+maintainers = [
+  {name = "Xingwei Sun", email = "sunxingwei@xiaomi.com"},
+  {name = "Heinrich Dinkel", email = "dinkelheinrich@xiaomi.com"},
+]
+
+readme = "README.md"
+license = {file = "LICENSE"}
+
+classifiers = [
+  "Development Status :: 3 - Alpha",
+
+  # Indicate who your project is intended for
+  "Intended Audience :: Developers",
+  "Topic :: Software Development :: Build Tools",
+
+  # Pick your license as you wish (see also "license" above)
+  "License :: OSI Approved :: Apache Software License",
+
+  # Specify the Python versions you support here.
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Environment :: GPU :: NVIDIA CUDA :: 11.4",
+  "Environment :: GPU :: NVIDIA CUDA :: 12",
+  "Topic :: Multimedia :: Sound/Audio :: Speech",
+]
+
+[project.urls]
+Homepage = "https://github.com/xiaomi-research/dasheng-denoiser"
+Documentation = "https://github.com/xiaomi-research/dasheng-denoiser"
+Repository = "https://github.com/xiaomi-research/dasheng-denoiser"
+Issues = "https://github.com/xiaomi-research/dasheng-denoiser/issues"
+
+[build-system]
+requires = ['hatchling']
+build-backend = 'hatchling.build'
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+bypass-selection = true
+
+[tool.setuptools.packages.find]
+where = ["."]  # Look in current directory
+
+[project.scripts]
+dasheng-denoiser = "dasheng_denoiser.inference:main"
+
