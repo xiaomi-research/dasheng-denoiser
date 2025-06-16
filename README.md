@@ -6,7 +6,7 @@
     Official PyTorch inference code for the Interspeech 2025 paper: <br>
     <b><em>Efficient Speech Enhancement via Embeddings from Pre-trained Generative Audioencoders</em></b>
     </p>
-    <a href="https://arxiv.org/"><img src="https://img.shields.io/badge/" alt="version"></a>
+    <a href="https://arxiv.org/abs/2506.11514"><img src="https://img.shields.io/badge/arxiv-2506.11514-red" alt="version"></a>
     <a href="https://www.python.org"><img src="https://img.shields.io/badge/Python-3.10+-orange" alt="version"></a>
     <a href="https://pytorch.org"><img src="https://img.shields.io/badge/PyTorch-2.0+-brightgreen" alt="python"></a>
     <a href="https://www.apache.org/licenses/LICENSE-2.0"><img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="mit"></a>
